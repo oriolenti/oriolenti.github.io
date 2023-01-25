@@ -15,3 +15,10 @@ Aquí almacenamos la página web estática
 
 - Guión seguido de espacio para crear item de list.
 
+
+## Ejemplos de listas de tareas (Tasks)
+
+- [] Aprender HTML
+- [] Aprender CSS
+- [] Aprender JavaScript
+- [x] Aprender MySQL
