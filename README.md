@@ -3,3 +3,12 @@ Además, hablaremos de Markdown
 
 ## ¿Qué és este repositorio?
 Aquí almacenamos la página web estática
+
+
+Dos **asteriscos** significa BOLD.
+
+Un *asterisco* significa ITALIC.
+
+Un _guión bajo_ significa también ITALIC.
+
+Para ***BOLD ITALIC*** tres asteriscos.
