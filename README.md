@@ -5,10 +5,13 @@ Además, hablaremos de Markdown
 Aquí almacenamos la página web estática
 
 
-Dos **asteriscos** significa BOLD.
+- Dos **asteriscos** significa BOLD.
 
-Un *asterisco* significa ITALIC.
+- Un *asterisco* significa ITALIC.
 
-Un _guión bajo_ significa también ITALIC.
+- Un _guión bajo_ significa también ITALIC.
 
-Para ***BOLD ITALIC*** tres asteriscos.
+- Para ***BOLD ITALIC*** tres asteriscos.
+
+- Guión seguido de espacio para crear item de list.
+
