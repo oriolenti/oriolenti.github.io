@@ -18,7 +18,7 @@ Aquí almacenamos la página web estática
 
 ## Ejemplos de listas de tareas (Tasks)
 
-- [] Aprender HTML
-- [] Aprender CSS
-- [] Aprender JavaScript
+- [ ] Aprender HTML
+- [ ] Aprender CSS
+- [ ] Aprender JavaScript
 - [x] Aprender MySQL
