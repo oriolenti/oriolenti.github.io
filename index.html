@@ -12,12 +12,14 @@
 		<script>
 		
 			let game_data;
+			let current_room = 0;
+			let items_picked = [];
 			
 			function game(data)
 			{
 				game_data = data;
 				document.getElementByID("terminal").innerHTML = "<p><strong>¡Bienvenidos a ENTIerrame!</strong> El juego de terror definitivo.</p>";
-				document.getElementByID("terminal").innerHTML += "<p>Te encuentras en "+game_data.rooms[0].name+". ¿Qué quieres hacer?</p>";
+				document.getElementByID("terminal").innerHTML += "<p>Te encuentras en "+game_data.rooms[current_room].name+". ¿Qué quieres hacer?</p>";
 			}
 			
 			fetch("https://oriolenti.github.io/game.json").then(response => response.json()).then(data => console.log(data));
@@ -41,14 +43,8 @@
 		</header>
 		<main>
 			<article>
-			<h2>Juegaco</h2>
-			<form>
-				<div id="terminal"></div>
-				<input type="text" id="commands" />
-				<input type="submit" value="Acción" />
-			</form>
-			</article>
-			
+			<h2>Intro</h2>
+			Hola
 			</article>
 			
 			<aside>

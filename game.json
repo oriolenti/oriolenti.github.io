@@ -2,8 +2,10 @@
 	"rooms":
 	[
 		{
+			
+			
 			"id":"1" , 
-			"name": "Mazmorra de Padel de Rafa", 
+			"name": "Entrada", 
 			"description":"Solo para gente de Enti, tú no",
 			"items": ["piedra", "bicicleta eterna"],
 			"doors": ["principal", "salida"]

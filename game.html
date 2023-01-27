@@ -1,25 +1,65 @@
-{
-	"rooms":
-	[
-		{
-			"id":"1" , 
-			"name": "Mazmorra de Padel de Rafa", 
-			"description":"Solo para gente de Enti, tú no",
-			"items": ["piedra", "bicicleta eterna"],
-			"doors": ["principal", "salida"]
-		}
-	],
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Oriol Valls Luna. Página de ENTI M04UF1 </title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
 
-	"items":
-	[
-		{"id:":"piedra", "name": "Pedrusco mugroso", "description":"Es una piedra sucia", "pickable":true},
-		{"id:":"bicicleta", "name": "Bicicleta eterna", "description":"Nadie sabe cuando llegó", "pickable":false}	
-	],
-	
-	"doors":
-	[
-		{"id:":"principal", "description": "Puerta de entrada a ENTI", "rooms":["parking", "hall"]},
-		{"id:":"salida", "description": "La echas de menos"}
-	]
-	
-}
+		<link rel="stylesheet" href="base.css"/>
+		<link rel="stylesheet" href="game.css"/>
+		
+		<script>
+		
+			let game_data;
+			
+			function game(data)
+			{
+				game_data = data;
+				document.getElementByID("terminal").innerHTML = "<p><strong>¡Bienvenidos a ENTIerrame!</strong> El juego de terror definitivo.</p>";
+				document.getElementByID("terminal").innerHTML += "<p>Te encuentras en "+game_data.rooms[0].name+". ¿Qué quieres hacer?</p>";
+			}
+			
+			fetch("https://oriolenti.github.io/game.json").then(response => response.json()).then(data => console.log(data));
+		
+		</script>
+	</head>
+		
+	<body>
+		<header>
+			<h1> Oriol Valls Luna. Página de ENTI M04UF1</h1>
+				<nav>
+					<ul id="main-menu">
+						<li id="menu-presentation"><a href="index.html">Presentación</a></li>
+						<li id="menu-hobbies"><a href="hobbies.html">Hobbies</a></li>
+						<li id="menu-contact"><a href="contact.html">Contacto</a></li>
+						<li id="menu-cv"><a href="cv.html">Curriculum Vitae</a></li>
+						<li id="menu-game"><a href= "game.html">Game</a></li>
+
+					</ul>
+				</nav>
+		</header>
+		<main>
+			<article>
+			<h2>Juegaco</h2>
+			<form>
+				<div id="terminal"></div>
+				<input type="text" id="commands" />
+				<input type="submit" value="Acción" />
+			</form>
+			</article>
+			
+			</article>
+			
+			<aside>
+			<h2>Lateral</h2>
+			Sobre mí
+			</aside>
+		</main>
+		
+		<footer>
+			<p>Oriol Valls Luna © <span id="footer-year">2022</span></p>
+			<script> document.getElementById("footer-year").innerHTML = new Date().getFullYear(); </script>
+		</footer>
+	</body>
+</html>
