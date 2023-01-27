@@ -10,8 +10,8 @@
 		<link rel="stylesheet" href="game.css"/>
 		
 		<script>
-			function game (data)
-			{console.log(data.rooms[0].name);}
+			function game(data){
+			console.log(data.rooms[0].name);}
 			fetch("https://oriolenti.github.io/game.json").then(response => response.json()).then(data => console.log(data));
 		</script>
 	</head>
