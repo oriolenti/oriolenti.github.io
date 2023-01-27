@@ -12,14 +12,14 @@
 
 	"items":
 	[
-		{"id:":"piedra", "name": "Pedrusco mugroso", "description":"Es una piedra sucia", "pickable":true},
-		{"id:":"bicicleta", "name": "Bicicleta eterna", "description":"Nadie sabe cuando llegó", "pickable":false}	
+		{"id":"piedra", "name": "Pedrusco mugroso", "description":"Es una piedra sucia", "pickable":true},
+		{"id":"bicicleta", "name": "Bicicleta eterna", "description":"Nadie sabe cuando llegó", "pickable":false}	
 	],
 	
 	"doors":
 	[
-		{"id:":"principal", "description": "Puerta de entrada a ENTI", "rooms":["parking", "hall"]},
-		{"id:":"salida", "description": "La echas de menos"}
+		{"id":"principal", "description": "Puerta de entrada a ENTI", "rooms":["parking", "hall"]},
+		{"id":"salida", "description": "La echas de menos"}
 	]
 	
 }
