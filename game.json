@@ -20,28 +20,28 @@
 			"description":"Si no eres de Tractoria ni lo usas",
 			"items":["bocata"],
 			"doors":["puertacomedor"]
-		}
+		},
 		{
 			"id":"clase1",
 			"name":"Aula - 1",
 			"description":"Más grande que tu casa",
 			"items":["bocata","zapato","documentos"],
 			"doors":["puertaclase1"]
-		}
+		},
 		{
 			"id":"clase2",
 			"name":"Aula - 2",
 			"description":"Donde comer y dormir",
 			"items":["bocata","rotulador", "champu"],
 			"doors":["puertaclase2"]
-		}
+		},
 		{
 			"id":"clase3",
 			"name":"Aula - 3",
 			"description":"Llena de aparatos y piezas",
 			"items":["herramientas","piezas"],
 			"doors":["puertaclase3","pasadizo"]
-		}
+		},
 		{
 			"id":"clase4",
 			"name":"Aula - 4",
