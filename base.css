@@ -32,17 +32,17 @@ aside{
   
 
   
-  @media (max-width: 600px){
+@media (max-width: 600px){
 	main{
-	flex-direction:column;
-	}	
-
-	article, aside{
-	flex-basis:100%;
+		flex-direction:column;
 	}
-	
-
-  };
+	article{
+		flex-basis:100%;
+	}
+	aside{
+		flex-basis:100%;
+	}
+}
   
   
   @keyframes moveRight {

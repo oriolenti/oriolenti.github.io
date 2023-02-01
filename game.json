@@ -1,27 +1,76 @@
 {
-	"rooms":
-	[
+	"rooms":[
 		{
-			
-			
-			"id":"1" , 
-			"name": "Entrada", 
-			"description":"Solo para gente de Enti, tú no",
-			"items": ["piedra", "bicicleta eterna"],
-			"doors": ["principal", "salida"]
+			"id":"parking",
+			"name":"Parking de ENTI",
+			"description":"El Parking que no puedes usar",
+			"items":["piedra","bicicleta"],
+			"doors":["principal","salida"]
+		},
+		{
+			"id":"hall",
+			"name":"El Hall principal",
+			"description":"Diáfano con cocina americana para ganar espacio",
+			"items":["piedra","detector"],
+			"doors":["principal","puertacomedor","puertaclase1","puertaclase2","puertaclase3","puertaclase4"]
+		},
+		{
+			"id":"comedor",
+			"name":"El Comedor",
+			"description":"Si no eres de Tractoria ni lo usas",
+			"items":["bocata"],
+			"doors":["puertacomedor"]
+		}
+		{
+			"id":"clase1",
+			"name":"Aula - 1",
+			"description":"Más grande que tu casa",
+			"items":["bocata","zapato","documentos"],
+			"doors":["puertaclase1"]
+		}
+		{
+			"id":"clase2",
+			"name":"Aula - 2",
+			"description":"Donde comer y dormir",
+			"items":["bocata","rotulador", "champu"],
+			"doors":["puertaclase2"]
+		}
+		{
+			"id":"clase3",
+			"name":"Aula - 3",
+			"description":"Llena de aparatos y piezas",
+			"items":["herramientas","piezas"],
+			"doors":["puertaclase3","pasadizo"]
+		}
+		{
+			"id":"clase4",
+			"name":"Aula - 4",
+			"description":"Como la 1, pero huele peor",
+			"items":["zapato"],
+			"doors":["puertaclase4","pasadizo","salida"]
 		}
 	],
-
-	"items":
-	[
-		{"id":"piedra", "name": "Pedrusco mugroso", "description":"Es una piedra sucia", "pickable":true},
-		{"id":"bicicleta", "name": "Bicicleta eterna", "description":"Nadie sabe cuando llegó", "pickable":false}	
+	
+	"items": [
+		{"id":"piedra","name":"Pedrusco mugroso","description":"Es una piedra sucia","pickable":true},
+		{"id":"bicicleta","name":"Bicicleta mugrosa eterna","description":"Llagó antes que tú... no se irá", "pickable":false},
+		{"id":"bocata","name":"Bocata ajeno","description":"Mejor que el tuyo, porque es de otro", "pickable":true},
+		{"id":"zapato","name":"Zapato viejo","description":"Feo pero resistente", "pickable":true},
+		{"id":"detector","name":"Detector de Metales","description":"Prohibidos machetes, déjalos en el paragüero", "pickable":false},
+		{"id":"rotulador","name":"Rotulador gastado","description":"Decorativo", "pickable":true},
+		{"id":"champú","name":"Champú en seco","description":"Tras mucha lucha, los subvenciona ENTI", "pickable":true},
+		{"id":"rotulador","name":"Rotulador gastado","description":"Decorativo", "pickable":true}
 	],
 	
-	"doors":
-	[
-		{"id":"principal", "description": "Puerta de entrada a ENTI", "rooms":["parking", "hall"]},
-		{"id":"salida", "description": "La echas de menos"}
+	"doors":[
+		{"id":"parking","description":"No es para tí","rooms":["parking"]},
+		{"id":"principal","description":"Puerta de entrada a ENTI","rooms":["parking","hall"]},
+		{"id":"salida","description":"La salvación"},
+		{"id":"puertacomedor","description":"Una puerta, al comedor...qué más quieres"},
+		{"id":"puertaclase1","description":"Entrada al Aula 1"},
+		{"id":"puertaclase2","description":"Entra al descanso"},
+		{"id":"puertaclase3","description":"Ves ordenadores desde fuera, como sio fuera raro..."},
+		{"id":"puertaclase4","description":"Da cosa tocarla"},
+		{"id":"salida2","description":"Ignoraste para que servía hasta ahora"}
 	]
-	
 }
