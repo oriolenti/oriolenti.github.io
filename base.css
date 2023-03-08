@@ -43,15 +43,3 @@ aside{
 		flex-basis:100%;
 	}
 }
-  
-  
-  @keyframes moveRight {
-  0%, 100% {
-    transform: translateX(0px);
-  }
-  100% {
-    transform: translateX(100px);
-  }
-}
-
-  animation: moveRight 2s;

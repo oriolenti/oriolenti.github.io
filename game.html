@@ -1,132 +1,57 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title> Oriol Valls Luna. Página de ENTI M04UF1 </title>
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+		<head>
+			<title> Oriol Valls Luna. Página de ENTI M04UF1 </title>
+			<link rel="preconnect" href="https://fonts.googleapis.com">
+			<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+			<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
 
-		<link rel="stylesheet" href="base.css"/>
-		<link rel="stylesheet" href="game.css" />
-	</head>
-	
-		<script>
-			let game_data;
+			<link rel="stylesheet" href="base.css"/>
+			<link rel="stylesheet" href="game.css" />
 			
-			
-			let current_room = 0;
-			let available_doors = 0;
-			let items_picked = [];
-			
+			<script type="text/javascript" src="game.js"></script>
 
-			function game (data)
-			{
-				game_data = data;
-				
-				document.getElementById("terminal").innerHTML = "<p><strong>¡Bienvenidos a ENTIerrame!</strong> El juego de terror definitivo.</p>";
-				document.getElementById("terminal").innerHTML += "<p>Te encuentras en: "+game_data.rooms[current_room].name+". Tus opciones són: "+game_data.doors[available_doors].id+". ¿Qué quieres hacer?</p>";
-			}
-			
-			function terminal_out (info)
-			{
-					let terminal = document.getElementById("terminal");
-
-					terminal.innerHTML += info;
-
-					terminal.scrollTop = terminal.scrollHeight;
-			}
-			
-			function parseCommand (command)
-			{
-				console.log("El comando ", command);
-					
-				switch (command){
-					case "ver":
-						terminal_out("<p>"+game_data.rooms[current_room].description+"</p>");
-							
-					case "ir":
-						terminal_out("<p>Disponible: "+game_data.doors[available_doors].id+"</p>");
-						
-					break;
-
-					default:
-						terminal_out("<p><strong>Error</strong>: "+command+" commando no encontrado</p>");
-				}
-			}
-			
-			
-			function parseInstruction (instruction)
-			{
-				console.log("La Instrucción", instruction);
-			}
-			
-			
-			function readAction()
-			{
-				let instruction = document.getElementById("commands").value;
-				let instruction_trim = instruction.trim();
-				
-				let data = instruction_trim.split(" ");
-				
-				if (data.length == 0 || instruction_trim == " "){
-				
-					document.getElementById("terminal").innerHTML += "<p><strong>Errror</strong>: Escribe una instrucción: </p>"
-					return
-				}
-				
-				if (data.length == 1){
-				parseCommand(data[0]);
-				}
-				else{
-					parseInstruction(data);
-				}
-				
-			}
-			
-			fetch("https://oriolenti.github.io/game.json").then(response => response.json()).then(data => game(data));
-		</script>
+		</head>
 		
-	</head>
-	
-	<body>
+		<body>
 
-		<header>
-			<h1> Oriol Valls Luna. Página de ENTI M04UF1</h1>
-				<nav>
-					<ul id="main-menu">
-						<li id="menu-presentation"><a href="index.html">Presentación</a></li>
-						<li id="menu-hobbies"><a href="hobbies.html">Hobbies</a></li>
-						<li id="menu-contact"><a href="contact.html">Contacto</a></li>
-						<li id="menu-cv"><a href="cv.html">Curriculum Vitae</a></li>
-						<li id="menu-game"><a href="game.html">Game</a></li>
+			<header>
+				<h1> Oriol Valls Luna. Página de ENTI M04UF1</h1>
+					<nav>
+						<ul id="main-menu">
+							<li id="menu-presentation"><a href="index.html">Presentación</a></li>
+							<li id="menu-hobbies"><a href="hobbies.html">Hobbies</a></li>
+							<li id="menu-contact"><a href="contact.html">Contacto</a></li>
+							<li id="menu-cv"><a href="cv.html">Curriculum Vitae</a></li>
+							<li id="menu-game"><a href="game.html">Game</a></li>
 
-					</ul>
-				</nav>
-			</header>
+						</ul>
+					</nav>
+				</header>
 
-		<main>
+			<main>
 			<article>
 				<h2>Juegaco</h2>
 
-					<form>
-						<script>  </script>
-						<div id="terminal"></div>
-						<input type="text" id="commands" />
-						<input type="submit" value="Acción" onclick="readAction(); return false;"/>
-					</form>
+				<form>
+					<div id="terminal"></div>
+					<input type="text" id="commands" />
+					<input type="submit" value="Acción" onclick="readAction(); return false;"/>
+				</form>
 			</article>
 
-			<aside>		
+			<aside>
 				<h2>Lateral</h2>
-				Sobre mí
+				<p>Ejemplo de menú lateral</p>
 			</aside>
-		</main>
-				
-		<footer>
-			<p>Oriol Valls Luna © <span id="footer-year">2022</span></p>
-			<script> 
-				document.getElementById("footer-year").innerHTML = new Date().getFullYear(); 
-			</script>
-		</footer>
-	</body>
+
+			</main>
+					
+			<footer>
+				<p>Oriol Valls Luna © <span id="footer-year">2022</span></p>
+				<script> 
+					document.getElementById("footer-year").innerHTML = new Date().getFullYear(); 
+				</script>
+			</footer>
+		</body>
 </html>

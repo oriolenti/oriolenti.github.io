@@ -10,7 +10,7 @@
 		{
 			"id":"hall",
 			"name":"El Hall principal",
-			"description":"Diáfano con cocina americana para ganar espacio",
+			"description":"Hall diáfano con cocina americana para ganar espacio",
 			"items":["piedra","detector"],
 			"doors":["principal","puertacomedor","puertaclase1","puertaclase2","puertaclase3","puertaclase4"]
 		},
@@ -63,9 +63,8 @@
 	],
 	
 	"doors":[
-		{"id":"parking","description":"No es para tí","rooms":["parking"]},
 		{"id":"principal","description":"Puerta de entrada a ENTI","rooms":["parking","hall"]},
-		{"id":"salida","description":"La salvación"},
+		{"id":"salida","description":"La salvación"}"rooms":["parking"]},
 		{"id":"puertacomedor","description":"Una puerta, al comedor...qué más quieres"},
 		{"id":"puertaclase1","description":"Entrada al Aula 1"},
 		{"id":"puertaclase2","description":"Entra al descanso"},
