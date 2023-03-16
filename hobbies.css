@@ -1,0 +1,114 @@
+aside {
+  width: 30%;
+  padding-left: 15px;
+  margin-left: 15px;
+  float: right;
+  font-style: italic;
+  background-color: lightgray;
+}
+
+
+main {
+	flex-direction: column;
+}
+
+h2 {
+	text-align: center;
+	font-size: 48px;
+}
+
+#description-page {
+	font-size: 20px;
+	text-align: center;
+
+}
+
+article {
+	margin: 10px 4%;
+	padding: 10px;
+	border: 1px groove rgba(22, 22, 23, .8);
+	background: rgba(22, 22, 23, .05);
+}
+
+h3 {
+	font-size: 28px;
+	margin: 5px 10px;
+}
+
+p{
+	align:center;
+}
+
+ul {
+  display: block;
+  list-style-type: disc;
+  margin-top: 1em;
+  margin-bottom: 1 em;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 40px;
+}
+
+.list-items {
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+
+ img {
+	width: 300px;
+	height: 200px;
+	border-radius: 5%;
+}
+
+
+* {box-sizing: border-box}
+.mySlides1, .mySlides2, .mySlides3, .mySlides4, .mySlides5, .mySlides6, .mySlides7, .mySlides8, .mySlides9, .mySlides10, .mySlides11, .mySlides12 {display: none}
+img {vertical-align: middle;}
+
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a grey background color */
+.prev:hover, .next:hover {
+  background-color: grey;
+  color: black;
+}
+
+   ul {
+    list-style-type: none;
+}
+
+figure {
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0px;
+}

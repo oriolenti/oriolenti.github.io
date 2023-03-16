@@ -3,11 +3,10 @@ html{
 	font-family: 'Josefin Sans', sans-serif;
 }
 
-header, nav, main, article, aside, footer{
+header, main, article, aside, footer{
 padding:0;
 margin:0;
 border:1px solid black;
-
 }
 
 header, nav, main{
@@ -30,16 +29,13 @@ aside{
 	
   }
   
+  ul {
+    list-style-type: none;
+}
 
-  
-@media (max-width: 600px){
-	main{
-		flex-direction:column;
-	}
-	article{
-		flex-basis:100%;
-	}
-	aside{
-		flex-basis:100%;
-	}
+figure {
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0px;
 }

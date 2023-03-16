@@ -1,9 +1,18 @@
 
-
-
 #terminal{
 border:2px solid black;
 min-width:240px;
 height:120px;
 overflow: scroll;
+}
+
+  ul {
+    list-style-type: none;
+}
+
+figure {
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0px;
 }
