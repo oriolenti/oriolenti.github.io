@@ -13,12 +13,10 @@ function game (data)
 	document.getElementById("terminal").innerHTML += "<p>Te encuentras en "+game_data.rooms[current_room].name+". ¿Qué quieres hacer?</p>";
 }
 
-function terminal_out (info)
-{
+function terminalOut (info) {
 	let terminal = document.getElementById("terminal");
-
+	
 	terminal.innerHTML += info;
-
 	terminal.scrollTop = terminal.scrollHeight;
 }
 
@@ -75,10 +73,9 @@ function executeCommand () {
 	}
 }
 
-function parseCommand (command)
-{
-	console.log("El comando ", command);
-	switch (command){
+function parseCommand (command) {
+	switch (command) {
+		
 		case 'ver':
 			terminalOut("<p>" + game_data.rooms[current_room].description + "</p>");
 			break;
@@ -126,7 +123,6 @@ function parseCommand (command)
 			terminalOut("<p><strong>ERROR:</strong> Comando <strong>" + command + "</strong> no encontrado</p>");
 	}
 }
-
 
 function parseInstruction (instruction) {
 	switch (instruction[0]) {
@@ -186,7 +182,7 @@ function parseInstruction (instruction) {
 					console.log(game_data.items[item_num]);
 
 					if (game_data.items[item_num].pickable == false) {
-						terminalOut("<p>Este objeto no puede coger</p>");
+						terminalOut("<p>El objeto<strong> " + item + "</strong> no puede ser cogido</p>");
 						return;
 					}
 					
@@ -196,7 +192,7 @@ function parseInstruction (instruction) {
 						}
 					});
 					
-					terminalOut("<p>El objeto<strong> " + item + "</strong> se ha añadido al inventario</p>");
+					terminalOut("<p>El objeto<strong> " + item + "</strong> ha sido añadido a tu inventario</p>");
 					return;
 				}
 			});
