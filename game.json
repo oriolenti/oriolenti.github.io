@@ -5,10 +5,10 @@
 			"name":"Parking de ENTI",
 			"description":"El Parking que no puedes usar",
 			"items":["piedra","bicicleta"],
-			"doors":["principal","salida"]
+			"doors":["hall","salida"]
 		},
 		{
-			"id":"principal",
+			"id":"hall",
 			"name":"El Hall principal",
 			"description":"Hall diáfano con cocina americana para ganar espacio",
 			"items":["piedra","detector"],
