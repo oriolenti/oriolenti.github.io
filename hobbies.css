@@ -39,16 +39,6 @@ p{
 	align:center;
 }
 
-ul {
-  display: block;
-  list-style-type: disc;
-  margin-top: 1em;
-  margin-bottom: 1 em;
-  margin-left: 0;
-  margin-right: 0;
-  padding-left: 40px;
-}
-
 .list-items {
 	list-style: none;
 	display: flex;
@@ -62,12 +52,22 @@ ul {
 	border-radius: 5%;
 }
 
+.list-items figure a {
+	color: black;
+	text-decoration: none;
+	text-align: center;
+	font-size: 16px;
+	font-weight: bold;
+}
+
 
 * {box-sizing: border-box}
 .mySlides1, .mySlides2, .mySlides3, .mySlides4, .mySlides5, .mySlides6, .mySlides7, .mySlides8, .mySlides9, .mySlides10, .mySlides11, .mySlides12 {display: none}
 img {vertical-align: middle;}
 
 
+
+/* Slideshow container */
 .slideshow-container {
   max-width: 1000px;
   position: relative;
@@ -77,7 +77,6 @@ img {vertical-align: middle;}
 /* Next & previous buttons */
 .prev, .next {
   cursor: pointer;
-  position: absolute;
   top: 50%;
   width: auto;
   padding: 16px;
@@ -102,13 +101,4 @@ img {vertical-align: middle;}
   color: black;
 }
 
-   ul {
-    list-style-type: none;
-}
-
-figure {
-  display: block;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  margin-left: 0px;
-}
+ 
