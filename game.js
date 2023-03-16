@@ -21,6 +21,59 @@ function terminal_out (info)
 	terminal.scrollTop = terminal.scrollHeight;
 }
 
+function findDoorNumber (door) {
+	let doors_num = game_data.doors.length;
+	
+	for (let i = 0; i < doors_num; i++) {
+		if (game_data.doors[i].id == door) {
+			return i;
+		}
+	}
+	return -1;
+}
+
+function findRoomNumber (room) {
+	let rooms_num = game_data.rooms.length;
+	
+	for (let i = 0; i < rooms_num; i++) {
+		if (game_data.rooms[i].id == room) {
+			return i;
+		}
+	}
+	
+	return -1;
+}
+
+function findItemNumber (item) {
+	let items_num = game_data.items.length;
+	
+	for (let i = 0; i < items_num; i++) {
+		if (game_data.items[i].id == item) {
+			return i;
+		}
+	}
+	
+	return -1;
+}
+
+function executeCommand () {
+	command = document.getElementById("commands").value.trim().split(" ");
+	document.getElementById("commands").value = "";
+	console.log(command);
+	
+	if (command.length == 0 || command == "") {
+		terminalOut("<p><strong>ERROR:</strong> Escribe una instrucción</p>");
+		return;
+	}
+	
+	if (command.length == 1) {
+		parseCommand(command[0]);
+	}
+	else {
+		parseInstruction(command);
+	}
+}
+
 function parseCommand (command)
 {
 	console.log("El comando ", command);
