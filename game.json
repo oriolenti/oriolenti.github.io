@@ -5,7 +5,7 @@
 			"name":"Parking de ENTI",
 			"description":"El Parking que no puedes usar",
 			"items":["piedra","bicicleta"],
-			"doors":["hall","salida"]
+			"doors":["principal","salida"]
 		},
 		{
 			"id":"hall",
