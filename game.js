@@ -3,13 +3,14 @@ let game_data;
 let current_room = 0;
 let items_picked = [];
 let available_doors = 0;
+let command = [];
 
 function game (data)
 {
 	game_data = data;
 	
 	document.getElementById("terminal").innerHTML = "<p><strong>¡Bienvenidos a ENTIerrame!</strong> El juego de terror definitivo.</p>";
-	document.getElementById("terminal").innerHTML += "<p>Te encuentras en "+game_data.rooms[current_room].name+". Tus opciones són: "+game_data.doors[available_doors].id+". ¿Qué quieres hacer?</p>";
+	document.getElementById("terminal").innerHTML += "<p>Te encuentras en "+game_data.rooms[current_room].name+". ¿Qué quieres hacer?</p>";
 }
 
 function terminal_out (info)
@@ -124,29 +125,6 @@ function parseCommand (command)
 }
 
 
-function getRoomNumber (room)
-{
-	for (let i = 0; i < game_data.rooms.length; i++){
-		if (game_data.rooms[i].id == room){
-			return i;
-		}
-	}
-
-	return -1;
-}
-
-function getDoorNumber (door)
-{
-	for (let i = 0; i < game_data.doors.length; i++){
-		if (game_data.doors[i].id == door){
-			return i;
-		}
-	}
-
-	return -1;
-}
-
-
 function parseInstruction (instruction) {
 	switch (instruction[0]) {
 		
@@ -242,25 +220,6 @@ function parseInstruction (instruction) {
 	}
 }
 
-function readAction ()
-{
-	let instruction = document.getElementById("commands").value;
-	let instruction_trim = instruction.trim();
 
-	let data = instruction_trim.split(" ");
-
-	if (data.length == 0 || instruction_trim == ""){
-		terminal_out("<p><strong>Error</strong>: escribe una instrucción</p>");
-		return;
-	}
-
-	if (data.length == 1){
-		parseCommand(data[0]);
-	}
-	else{
-		parseInstruction(data);
-	}
-
-}
 
 fetch("https://oriolenti.github.io/game.json").then(response => response.json()).then(data => game(data));
